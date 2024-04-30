@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Sulley</string>
+
+    <!-- Action Menu Strings -->
+    <string name="action_logging_name">Logging Name</string>
+
+    <!-- BLE Strings -->
+    <string name="ble_not_supported">BLE Not Supported on this device</string>
+    <string name="permissions_error">Permissions not set up correctly!</string>
+    <string name="sensor_disconnected">Sensor is disconnected</string>
+    <string name="sensor_connected">Sensor is connected</string>
+    <string name="sensor_status">Temperature: %1$.2f\nHumidity: %2$.2f\nLast Updated: %3$s</string>
+    <string name="sensor_address_label">Sensor Serial Number:</string>
+
+    <string name="no_data">No data yet!</string>
+    <!-- Broadcast Intent Strings -->
+    <string name="characteristic">characteristic</string>
+
+    <string name="device_test_3_0_2">0C:1A:10:00:94:DC</string>
+    <string name="device_test_3_0_0">0C:1A:10:00:76:31</string>
+    <string name="device_test_4_0_8">0C:1A:10:00:92:3C</string>
+
+    <!-- Button Text Strings -->
+    <string name="start_ble">Start BLE</string>
+    <string name="stop_ble">Stop BLE</string>
+    <string name="start_otau">Start OTAU</string>
+    <string name="stop_otau">Stop OTAU</string>
+    <string name="read_env_measure_interval">Set Env Interval To: </string>
+    <string name="start_manual_error_read_timer">Start Manual Error Read Loop</string>
+    <string name="stop_manual_error_read_timer">Stop Manual Error Read Loop</string>
+    <string name="mac_address">Serial Number</string>
+    <string name="btn_set_loggin_name_text">Set Logging Name</string>
+    <string name="btn_otau_page_text">OTAU</string>
+    <!-- Screen widget Hint Strings -->
+    <string name="measurement_interval_set_value_hint">Num Seconds</string>
+    <string name="last_error_not_read">Error indication not yet received.</string>
+    <string name="env_interval_not_read">Env Interval not yet read.</string>
+    <string name="logging_name_hint">Logging Name</string>
+
+    <!-- Timer message strings -->
+    <string name="data_expected_in">New data expected in %d seconds.</string>
+
+    <string name="default_version">Unknown Version!</string>
+</resources>

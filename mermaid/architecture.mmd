@@ -1,0 +1,18 @@
+```mermaid
+graph LR
+subgraph Interfaces
+SM(SensorManager)
+S(Sensor)
+R(Routine)
+end
+subgraph Listeners
+SLL-SM(SensorLifecycleListener)
+SLL-S(SensorLifecycleListener)
+RL(RoutineListener)
+end
+S --> SLL-S
+SM --> SLL-SM
+R --> RL
+SM --Owns--> S
+S --Owns--> R
+```

@@ -1,0 +1,13 @@
+```mermaid
+graph LR
+subgraph Optional
+Scan(Sensor Advertisement)
+end
+I(Init by Serial Number)
+C(Connect)
+D(Disconnect)
+Scan --> I
+I --> C
+C --> D
+D --> C
+```

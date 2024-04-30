@@ -1,0 +1,17 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.blustream.sulley">
+
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <application>
+        <receiver android:name="io.blustream.sulley.sensor.ConnectTask" />
+
+<!--        <service android:name="io.blustream.sulley.service.ForegroundProximityService" />-->
+
+    </application>
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+
+</manifest>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.blustream.view.details.SensorDetailsFragment">
+
+    <CheckBox
+        android:id="@+id/iBeaconLogCb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:enabled="true"
+        android:text="@string/ibeacon_events"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/advLogCb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:enabled="true"
+        android:text="@string/advertisement_events"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iBeaconLogCb" />
+
+    <CheckBox
+        android:id="@+id/connectionLogCb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:enabled="true"
+        android:text="@string/connection_state_changes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/advLogCb" />
+
+    <CheckBox
+        android:id="@+id/dataReceivedLogCb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:enabled="true"
+        android:text="@string/data_received_events"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/connectionLogCb" />
+
+    <TextView
+        android:id="@+id/logContentTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:background="@android:color/darker_gray"
+        android:gravity="top"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logLabelTextViewTv" />
+
+    <TextView
+        android:id="@+id/logLabelTextViewTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/log"
+        app:layout_constraintBottom_toBottomOf="@+id/logsTimeoutsSwitch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dataReceivedLogCb" />
+
+    <Switch
+        android:id="@+id/logsTimeoutsSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="logs/timeouts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/logLabelTextViewTv"
+        app:layout_constraintTop_toBottomOf="@id/dataReceivedLogCb" />
+
+    <TextView
+        android:id="@+id/lastSeenTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Last seen: 4 sec" />
+
+    <TextView
+        android:id="@+id/longestIntervalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lastSeenTextView"
+        tools:text="Longest interval: 150s ec" />
+
+    <TextView
+        android:id="@+id/averageIntervalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/longestIntervalTextView"
+        tools:text="Average interval: sec" />
+
+    <TextView
+        android:id="@+id/lastScanSessionDurationTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/averageIntervalTextView"
+        tools:text="Scanning: 25 min" />
+
+    <TextView
+        android:id="@+id/missedSensorPercentageTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lastScanSessionDurationTv"
+        tools:text="losses: 2%, 12 timeouts." />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

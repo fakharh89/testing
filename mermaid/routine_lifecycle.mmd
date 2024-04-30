@@ -1,0 +1,11 @@
+```mermaid
+graph LR
+IR(Init)
+St(Start)
+Sp(Stop)
+D(Deallocate)
+IR --> St
+St --> Sp
+Sp --> St
+Sp --> D
+```

@@ -1,0 +1,20 @@
+```mermaid
+sequenceDiagram
+participant Sv as Server
+participant P as Phone
+participant Sn as Sensor
+P->>Sv: Get request for linking auth data
+Sv->>P: Return auth data
+P->>Sn: Enable reg data notifications
+Sn->>P: Confirm notification enable
+Note over Sv,Sn: Above is deprecated authentiation functionality.
+Note right of P: Current system<br/>should write<br/>random data.
+P->>Sn: Write auth data
+Sn->>P: Confirm write cmd
+Note right of P: If system will<br/>perform encryption,<br/>write command will<br/>succeed.
+Note over Sv,Sn: Below is deprecated authentiation functionality.
+Sn->>P: Encrypted auth data
+P->>Sv: Put link w/encrypted auth data
+Note over Sv: If server can decrypt<br/>and get original data,<br/>link succeeds.
+Sv->>P: Link request result
+```
